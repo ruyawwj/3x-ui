@@ -1927,64 +1927,66 @@ SSH_port_forwarding() {
 }
 
 show_usage() {
-    echo -e "┌────────────────────────────────────────────────────────────────┐
-│  ${blue}x-ui 控制菜单用法 (子命令):${plain}                       │
-│                                                                │
-│  ${blue}x-ui${plain}                       - 管理脚本                   │
-│  ${blue}x-ui start${plain}                 - 启动                       │
-│  ${blue}x-ui stop${plain}                  - 停止                       │
-│  ${blue}x-ui restart${plain}               - 重启                       │
-│  ${blue}x-ui status${plain}                - 状态                       │
-│  ${blue}x-ui settings${plain}              - 当前设置                   │
-│  ${blue}x-ui enable${plain}                - 开机自启                   │
-│  ${blue}x-ui disable${plain}               - 禁用自启                   │
-│  ${blue}x-ui log${plain}                   - 查看日志                   │
-│  ${blue}x-ui banlog${plain}                - 查看封禁日志               │
-│  ${blue}x-ui update${plain}                - 更新                       │
-│  ${blue}x-ui update-all-geofiles${plain}   - 更新所有geo文件            │
-│  ${blue}x-ui legacy${plain}                - 旧版本                     │
-│  ${blue}x-ui install${plain}               - 安装                       │
-│  ${blue}x-ui uninstall${plain}             - 卸载                       │
-└────────────────────────────────────────────────────────────────┘"
+    echo -e "
+   ===================================
+   ${blue}x-ui 控制菜单用法 (子命令):${plain}
+   ===================================
+   ${blue}x-ui${plain}       - 管理脚本 
+   ${blue}x-ui start${plain}   - 启动
+   ${blue}x-ui stop${plain}    - 停止
+   ${blue}x-ui restart${plain}   - 重启
+   ${blue}x-ui status${plain}    - 状态
+   ${blue}x-ui settings${plain}   - 当前设置
+   ${blue}x-ui enable${plain}     - 开机自启
+   ${blue}x-ui disable${plain}      - 禁用自启
+   ${blue}x-ui log${plain}          - 查看日志
+   ${blue}x-ui banlog${plain}        - 查看封禁日志
+   ${blue}x-ui update${plain}         - 更新
+   ${blue}x-ui update-all-geofiles${plain} - 更新所有geo文件
+   ${blue}x-ui legacy${plain}           - 旧版本
+   ${blue}x-ui install${plain}            - 安装
+   ${blue}x-ui uninstall${plain}           - 卸载
+   ===================================
+   "
 }
 
 show_menu() {
-    echo -e "
-╔────────────────────────────────────────────────╗
-│   ${green}3X-UI 面板管理脚本${plain}                │
-│   ${green}0.${plain} 退出脚本                               │
-│────────────────────────────────────────────────│
-│   ${green}1.${plain} 安装                                   │
-│   ${green}2.${plain} 更新                                    │
-│   ${green}3.${plain} 更新菜单                               │
-│   ${green}4.${plain} 旧版本                            │
-│   ${green}5.${plain} 卸载                                 │
-│────────────────────────────────────────────────│
-│   ${green}6.${plain} 重置用户名和密码                 │
-│   ${green}7.${plain} 重置Web基础路径                       │
-│   ${green}8.${plain} 重置设置                            │
-│   ${green}9.${plain} 更改端口                               │
-│  ${green}10.${plain} 查看当前设置                     │
-│────────────────────────────────────────────────│
-│  ${green}11.${plain} 启动                                     │
-│  ${green}12.${plain} 停止                                      │
-│  ${green}13.${plain} 重启                                   │
-│  ${green}14.${plain} 检查状态                              │
-│  ${green}15.${plain} 日志管理                           │
-│────────────────────────────────────────────────│
-│  ${green}16.${plain} 启用开机自启                          │
-│  ${green}17.${plain} 禁用开机自启                         │
-│────────────────────────────────────────────────│
-│  ${green}18.${plain} SSL证书管理                │
-│  ${green}19.${plain} Cloudflare SSL证书                │
-│  ${green}20.${plain} IP限制管理                       │
-│  ${green}21.${plain} 防火墙管理                       │
-│  ${green}22.${plain} SSH端口转发管理            │
-│────────────────────────────────────────────────│
-│  ${green}23.${plain} 启用BBR                                │
-│  ${green}24.${plain} 更新Geo文件                          │
-│  ${green}25.${plain} Speedtest by Ookla                        │
-╚────────────────────────────────────────────────╝
+   echo -e "
+   ===================================
+   ${green}3X-UI 面板管理脚本${plain}
+   ${green}0.${plain} 退出脚本
+   ===================================
+   ${green}1.${plain} 安装
+   ${green}2.${plain} 更新
+   ${green}3.${plain} 更新菜单
+   ${green}4.${plain} 旧版本
+   ${green}5.${plain} 卸载
+   ===================================
+   ${green}6.${plain} 重置用户名和密码
+   ${green}7.${plain} 重置Web基础路径
+   ${green}8.${plain} 重置设置
+   ${green}9.${plain} 更改端口
+   ${green}10.${plain} 查看当前设置
+   ===================================
+   ${green}11.${plain} 启动
+   ${green}12.${plain} 停止
+   ${green}13.${plain} 重启
+   ${green}14.${plain} 检查状态
+   ${green}15.${plain} 日志管理
+   ===================================
+   ${green}16.${plain} 启用开机自启
+   ${green}17.${plain} 禁用开机自启
+   ===================================
+   ${green}18.${plain} SSL证书管理
+   ${green}19.${plain} Cloudflare SSL证书
+   ${green}20.${plain} IP限制管理
+   ${green}21.${plain} 防火墙管理
+   ${green}22.${plain} SSH端口转发管理
+   ===================================
+   ${green}23.${plain} 启用BBR
+   ${green}24.${plain} 更新Geo文件
+   ${green}25.${plain} Speedtest by Ookla
+   ===================================
 "
     show_status
     echo && read -rp "请输入您的选择 [0-25]: " num
