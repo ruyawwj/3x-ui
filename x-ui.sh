@@ -110,7 +110,7 @@ select_mirror() {
 install() {
     # 选择镜像源
     select_mirror
-    bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/MHSanaei/3x-ui/main/install.sh)
+    bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -131,7 +131,7 @@ update() {
     fi
     # 选择镜像源
     select_mirror
-    bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/MHSanaei/3x-ui/main/update.sh)
+    bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/main/update.sh)
     if [[ $? == 0 ]]; then
         LOGI "更新完成，面板已自动重启"
         before_show_menu
@@ -151,7 +151,7 @@ update_menu() {
 
     # 选择镜像源
     select_mirror
-    wget -O /usr/bin/x-ui ${MIRROR_URL}https://raw.githubusercontent.com/MHSanaei/3x-ui/main/x-ui.sh
+    wget -O /usr/bin/x-ui ${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/main/x-ui.sh
     chmod +x /usr/local/x-ui/x-ui.sh
     chmod +x /usr/bin/x-ui
 
@@ -175,7 +175,7 @@ legacy_version() {
     # 选择镜像源
     select_mirror
     # 在下载链接中使用输入的面板版本
-    install_command="bash <(curl -Ls \"${MIRROR_URL}https://raw.githubusercontent.com/mhsanaei/3x-ui/v$tag_version/install.sh\") v$tag_version"
+    install_command="bash <(curl -Ls \"${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/v$tag_version/install.sh\") v$tag_version"
 
     echo "下载并安装面板版本 $tag_version..."
     eval $install_command
@@ -216,7 +216,7 @@ uninstall() {
     echo "如果需要重新安装此面板，可以使用以下命令:"
     # 选择镜像源
     select_mirror
-    echo -e "${green}bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)${plain}"
+    echo -e "${green}bash <(curl -Ls ${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)${plain}"
     echo ""
     # 捕获SIGTERM信号
     trap delete_script SIGTERM
@@ -592,7 +592,7 @@ enable_bbr() {
 update_shell() {
     # 选择镜像源
     select_mirror
-    wget -O /usr/bin/x-ui -N ${MIRROR_URL}https://github.com/MHSanaei/3x-ui/raw/main/x-ui.sh
+    wget -O /usr/bin/x-ui -N ${MIRROR_URL}https://github.com/ruyawwj/3x-ui/raw/main/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         LOGE "下载脚本失败，请检查机器是否可以连接 Github"
