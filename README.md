@@ -18,7 +18,7 @@
 **3X-UI** — advanced, open-source web-based control panel designed for managing Xray-core server. It offers a user-friendly interface for configuring and monitoring various VPN and proxy protocols.
 
 > [!IMPORTANT]
-> This project is only for personal usage, please do not use it for illegal purposes, and please do not use it in a production environment.
+> This project is only for personal usage, please do not use it for illegal purposes, 和 please do not use it in a production environment.
 
 As an enhanced fork of the original X-UI project, 3X-UI provides improved stability, broader protocol support, and additional features.
 
@@ -29,7 +29,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.s
 ```
 Domestic server operation
 ```bash
-bash <(curl -Ls https://github.comhttps://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
+bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
 ```
 
 For full documentation, please visit the [project Wiki](https://github.com/MHSanaei/3x-ui/wiki).
