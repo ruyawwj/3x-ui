@@ -31,3 +31,7 @@ bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/ruyawwj/3x-
 
 
 完整文档请参阅 [项目Wiki](https://github.com/ruyawwj/3x-ui/wiki)。
+
+## 联系
+
+需要加群讨论的可以直接加https://t.me/ruyawangluo
