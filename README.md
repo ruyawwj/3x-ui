@@ -23,9 +23,13 @@
 As an enhanced fork of the original X-UI project, 3X-UI provides improved stability, broader protocol support, and additional features.
 
 ## Quick Start
-
+Foreign server operation
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
+```
+Domestic server operation
+```bash
+bash <(curl -Ls https://github.comhttps://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
 ```
 
 For full documentation, please visit the [project Wiki](https://github.com/MHSanaei/3x-ui/wiki).
