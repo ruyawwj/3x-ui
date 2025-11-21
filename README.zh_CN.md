@@ -25,11 +25,11 @@
 ## 快速开始
 国外服务器运行
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
 ```
 国内服务器运行
 ```
-bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install-cn.sh)
+bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install-cn.sh)
 ```
 
 完整文档请参阅 [项目Wiki](https://github.com/MHSanaei/3x-ui/wiki)。
