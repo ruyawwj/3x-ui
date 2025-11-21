@@ -184,17 +184,17 @@ install_x-ui() {
 
     # 下载资源
     if [ $# == 0 ]; then
-        tag_version=$(curl -Ls "${MIRROR_URL}https://api.github.com/repos/MHSanaei/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        tag_version=$(curl -Ls "${MIRROR_URL}https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$tag_version" ]]; then
             echo -e "${yellow}尝试使用IPv4获取版本...${plain}"
-            tag_version=$(curl -4 -Ls "${MIRROR_URL}https://api.github.com/repos/MHSanaei/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+            tag_version=$(curl -4 -Ls "${MIRROR_URL}https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
             if [[ ! -n "$tag_version" ]]; then
                 echo -e "${red}获取x-ui版本失败，可能是由于GitHub API限制，请稍后重试${plain}"
                 exit 1
             fi
         fi
         echo -e "获取到x-ui最新版本: ${tag_version}，开始安装..."
-        wget --inet4-only -N -O /usr/local/x-ui-linux-$(arch).tar.gz "${MIRROR_URL}https://github.com/MHSanaei/3x-ui/releases/download/${tag_version}/x-ui-linux-$(arch).tar.gz"
+        wget --inet4-only -N -O /usr/local/x-ui-linux-$(arch).tar.gz "${MIRROR_URL}https://github.com/ruyawwj/3x-ui/releases/download/${tag_version}/x-ui-linux-$(arch).tar.gz"
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载x-ui失败，请确保服务器可以访问GitHub ${plain}"
             exit 1
@@ -209,7 +209,7 @@ install_x-ui() {
             exit 1
         fi
 
-        url="${MIRROR_URL}https://github.com/MHSanaei/3x-ui/releases/download/${tag_version}/x-ui-linux-$(arch).tar.gz"
+        url="${MIRROR_URL}https://github.com/ruyawwj/3x-ui/releases/download/${tag_version}/x-ui-linux-$(arch).tar.gz"
         echo -e "开始安装 x-ui $1"
         wget --inet4-only -N -O /usr/local/x-ui-linux-$(arch).tar.gz ${url}
         if [[ $? -ne 0 ]]; then
@@ -218,7 +218,7 @@ install_x-ui() {
         fi
     fi
     
-    wget --inet4-only -O /usr/bin/x-ui-temp "${MIRROR_URL}https://raw.githubusercontent.com/MHSanaei/3x-ui/main/x-ui.sh"
+    wget --inet4-only -O /usr/bin/x-ui-temp "${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/main/x-ui.sh"
     if [[ $? -ne 0 ]]; then
         echo -e "${red}下载x-ui.sh失败${plain}"
         exit 1
@@ -255,7 +255,7 @@ install_x-ui() {
     config_after_install
 
     if [[ $release == "alpine" ]]; then
-        wget --inet4-only -O /etc/init.d/x-ui "${MIRROR_URL}https://raw.githubusercontent.com/MHSanaei/3x-ui/main/x-ui.rc"
+        wget --inet4-only -O /etc/init.d/x-ui "${MIRROR_URL}https://raw.githubusercontent.com/ruyawwj/3x-ui/main/x-ui.rc"
         if [[ $? -ne 0 ]]; then
             echo -e "${red}下载x-ui.rc失败${plain}"
             exit 1
