@@ -184,10 +184,10 @@ install_x-ui() {
 
     # 下载资源
     if [ $# == 0 ]; then
-        tag_version=$(curl -Ls "${MIRROR_URL}https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        tag_version=$(curl -Ls "https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$tag_version" ]]; then
             echo -e "${yellow}尝试使用IPv4获取版本...${plain}"
-            tag_version=$(curl -4 -Ls "${MIRROR_URL}https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+            tag_version=$(curl -4 -Ls "https://api.github.com/repos/ruyawwj/3x-ui/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
             if [[ ! -n "$tag_version" ]]; then
                 echo -e "${red}获取x-ui版本失败，可能是由于GitHub API限制，请稍后重试${plain}"
                 exit 1
