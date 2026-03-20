@@ -27,13 +27,13 @@
 国外服务器
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install.sh)
 ```
 
 国内服务器
 
 ```
-bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install_zh.sh)
+bash <(curl -Ls https://ghfast.top/https://raw.githubusercontent.com/ruyawwj/3x-ui/master/install_zh.sh)
 ```
 
 完整文档请参阅 [项目Wiki](https://github.com/MHSanaei/3x-ui/wiki)。
